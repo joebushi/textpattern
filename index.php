@@ -8,6 +8,8 @@ $LastChangedRevision$
 	error_reporting(E_ALL);
 	@ini_set("display_errors","1");
 
+  session_start(); // jdb_lang: let's use sessions for managing languages
+
 	if (@ini_get('register_globals'))
 		foreach ( $_REQUEST as $name => $value )
 			unset($$name);
